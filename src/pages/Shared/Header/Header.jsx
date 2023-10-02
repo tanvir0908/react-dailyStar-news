@@ -3,12 +3,14 @@ import moment from "moment";
 
 export default function Header() {
   return (
-    <div>
-      <div className="text-center">
-        <img className="w-3/4 mx-auto" src={logo} alt="" />
-        <p>Journalism Without Fear or Favour</p>
-        <p className="text-xl">{moment().format("dddd, MMMM DD, YYYY")}</p>
-      </div>
+    <div className="text-center my-8">
+      <img className="w-96 mx-auto" src={logo} alt="" />
+      <p className="my-3 text-lg text-[#706F6F]">
+        Journalism Without Fear or Favour
+      </p>
+      <p className="text-xl font-medium text-[#403F3F]">
+        {moment().format("dddd, MMMM DD, YYYY")}
+      </p>
     </div>
   );
 }
