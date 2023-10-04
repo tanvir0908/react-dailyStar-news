@@ -59,7 +59,7 @@ export default function Navbar() {
             <img src={avatar} />
           </div>
         </label>
-        <Link>
+        <Link to={"/login"}>
           <button className="bg-[#403F3F] text-white text-xl font-medium px-5 py-3 rounded-lg">
             Login
           </button>

@@ -16,7 +16,7 @@ export default function LeftSideNav() {
       <div className="mt-5" id="left-nav">
         {categories.map((category) => (
           <NavLink
-            to={`/category/${category.id}`}
+            to={`/category/${category.id}`}o
             className="block text-2xl font-medium px-10 py-4"
             key={category.id}
           >
