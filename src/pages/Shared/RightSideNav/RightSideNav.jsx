@@ -3,15 +3,28 @@ import { AiFillGithub, AiFillTwitterCircle } from "react-icons/ai";
 import qZone1 from "../../../assets/qZone1.png";
 import qZone2 from "../../../assets/qZone2.png";
 import qZone3 from "../../../assets/qZone3.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 export default function RightSideNav() {
+  const { signInWithGoogle } = useContext(AuthContext);
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => console.log(result))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       {/* Login With Section */}
       <div>
         <h2 className="text-3xl font-medium">Login With</h2>
         <div className="flex flex-col gap-5 mt-5">
-          <button className="btn btn-outline normal-case text-lg">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn btn-outline normal-case text-lg"
+          >
             <BsGoogle className="text-xl" />
             Login with Google
           </button>

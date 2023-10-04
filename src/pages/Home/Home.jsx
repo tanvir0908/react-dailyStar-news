@@ -11,9 +11,10 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
-      <BreakingNews />
-      <Navbar />
+      <div className="mb-10">
+        <BreakingNews />
+      </div>
+
       <div className="grid grid-cols-1   lg:grid-cols-4 gap-6">
         <div>
           <LeftSideNav />

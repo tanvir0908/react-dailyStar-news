@@ -23,8 +23,6 @@ export default function Register() {
 
   return (
     <div>
-      <Header />
-      <Navbar />
       {/* Login Form */}
       <h2 className="text-4xl font-semibold text-center my-10">
         Please Register

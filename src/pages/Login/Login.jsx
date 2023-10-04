@@ -26,14 +26,12 @@ export default function Login() {
 
   return (
     <div>
-      <Header />
-      <Navbar />
       {/* Login Form */}
       <h2 className="text-4xl font-semibold text-center my-10">Please Login</h2>
       <form onSubmit={handleLogin} className="md:w-3/4 lg:w-2/6 mx-auto">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text text-lg font-medium">Email</span>
           </label>
           <input
             type="email"
@@ -45,7 +43,7 @@ export default function Login() {
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text text-lg font-medium">Password</span>
           </label>
           <input
             type="password"
@@ -54,10 +52,13 @@ export default function Login() {
             className="input input-bordered"
             required
           />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">
+          <label className="label ">
+            <Link
+              to={"/reset"}
+              className="label-text-alt font-medium text-lg link link-hover"
+            >
               Forgot password?
-            </a>
+            </Link>
           </label>
         </div>
         <div className="form-control mt-6 ">

@@ -5,6 +5,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import News from "../pages/News/News";
 import PrivateRoute from "./PrivateRoute";
+import ResetPassword from "../pages/ResetPassword/ResetPassword";
 
 const routes = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const routes = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path: '/reset',
+        element: <ResetPassword/>
+      }
     ],
   },
 ]);
