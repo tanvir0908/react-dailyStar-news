@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBx7k_jf3XnLPaaIyqEWEUCe7EfpYKUObY",
-  authDomain: "react-dailystar-news.firebaseapp.com",
-  projectId: "react-dailystar-news",
-  storageBucket: "react-dailystar-news.appspot.com",
-  messagingSenderId: "8562808001",
-  appId: "1:8562808001:web:21a3563159dbbb3ce17040",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 const app = initializeApp(firebaseConfig);
