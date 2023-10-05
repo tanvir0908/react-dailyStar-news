@@ -1,12 +1,19 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import SmallCard from "./SmallCard";
 import smallImage1 from "../../../assets/1.png";
 import smallImage2 from "../../../assets/2.png";
 import smallImage3 from "../../../assets/3.png";
+import { NavLink } from "react-router-dom";
 
-export default function LeftSideNav() {
+export default function LeftSideNav({ setCategoryID }) {
   const [categories, setCategories] = useState([]);
+  const [active, setActive] = useState(0);
+
+  const handleClickNavbar = (id) => {
+    setCategoryID(id);
+    setActive(id);
+  };
 
   useEffect(() => {
     fetch("categories.json")
@@ -19,8 +26,16 @@ export default function LeftSideNav() {
       <h2 className="text-4xl font-semibold">All Categories</h2>
       <div className="mt-5" id="left-nav">
         {categories.map((category) => (
+          // <button
+          //   onClick={() => handleClickNavbar(category.id)}
+          //   className={`block text-2xl font-medium px-10 py-4`}
+          //   key={category.id}
+          // >
+          //   {category.name}
+          // </button>
           <NavLink
-            className="block text-2xl font-medium px-10 py-4 active:bg-violet-700"
+            onClick={() => handleClickNavbar(category.id)}
+            className={`block text-2xl font-medium px-10 py-4  hover:bg-[#E7E7E7] rounded-lg`}
             key={category.id}
           >
             {category.name}

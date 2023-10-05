@@ -15,6 +15,12 @@ export default function Home() {
     });
   }, []);
 
+  const filteredData = news.filter((data) => {
+    if (data.category_id === categoryId) {
+      return data.category_id;
+    }
+  });
+
   return (
     <div>
       <div className="mb-10">
@@ -23,14 +29,18 @@ export default function Home() {
 
       <div className="grid grid-cols-1   lg:grid-cols-4 gap-6">
         <div>
-          <LeftSideNav />
+          <LeftSideNav setCategoryID={setCategoryID} />
         </div>
         {/* News Container */}
         <div className="md:col-span-2">
           <h2 className="text-4xl font-semibold">The Daily Star News Home</h2>
-          {news.map((singleNews) => (
-            <NewsCard key={singleNews._id} singleNews={singleNews} />
-          ))}
+          {categoryId == 0
+            ? news.map((singleNews) => (
+                <NewsCard key={singleNews._id} singleNews={singleNews} />
+              ))
+            : filteredData.map((singleNews) => (
+                <NewsCard key={singleNews._id} singleNews={singleNews} />
+              ))}
         </div>
         <div>
           <RightSideNav />

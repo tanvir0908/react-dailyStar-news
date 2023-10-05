@@ -57,7 +57,7 @@ export default function NewsCard({ singleNews }) {
         </div>
       </div>
       <div className="px-5 py-5 border-x-2 border-[#F3F3F3]">
-        <h2 className="text-3xl font-semibold">{title}</h2>
+        <h2 className="text-3xl font-semibold leading-relaxed">{title}</h2>
         <img className="w-full my-3" src={image_url} alt="" />
         {/* <p className="text-lg">{details.length>200 ? }</p> */}
         {details.length > 500 ? (
