@@ -7,10 +7,16 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 export default function RightSideNav() {
-  const { signInWithGoogle } = useContext(AuthContext);
+  const { signInWithGoogle, signInWithGithub } = useContext(AuthContext);
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
+      .then((result) => console.log(result))
+      .catch((error) => console.log(error));
+  };
+
+  const handleGithubLogin = () => {
+    signInWithGithub()
       .then((result) => console.log(result))
       .catch((error) => console.log(error));
   };
@@ -28,7 +34,10 @@ export default function RightSideNav() {
             <BsGoogle className="text-xl" />
             Login with Google
           </button>
-          <button className="btn btn-outline normal-case text-lg">
+          <button
+            onClick={handleGithubLogin}
+            className="btn btn-outline normal-case text-lg"
+          >
             <AiFillGithub className="text-2xl" />
             Login with Github
           </button>

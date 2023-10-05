@@ -61,7 +61,7 @@ export default function NewsCard({ singleNews }) {
         <img className="w-full my-3" src={image_url} alt="" />
         {/* <p className="text-lg">{details.length>200 ? }</p> */}
         {details.length > 500 ? (
-          <p className="text-lg text-[#706F6F] leading-relaxed">
+          <p className="text-xl text-[#706F6F] leading-relaxed">
             {details.slice(0, 500)}
             <Link
               to={`/news/${_id}`}
@@ -71,7 +71,7 @@ export default function NewsCard({ singleNews }) {
             </Link>
           </p>
         ) : (
-          <p className="text-lg text-[#706F6F] leading-relaxed"> {details}</p>
+          <p className="text-xl text-[#706F6F] leading-relaxed"> {details}</p>
         )}
         <hr className="mt-5" />
       </div>
@@ -79,7 +79,6 @@ export default function NewsCard({ singleNews }) {
       <div className="px-5 rounded-b-lg pb-5 flex justify-between items-center border-2 border-t-0 border-[#F3F3F3]">
         <div className="flex items-center gap-3">
           <Rating rating={rating.number} />
-          <span>{rating.number}</span>
         </div>
         <div className="flex items-center gap-2">
           <AiFillEye className="text-2xl" />

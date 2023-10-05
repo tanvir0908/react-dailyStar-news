@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Header from "../Shared/Header/Header";
-import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -10,8 +8,6 @@ export default function Register() {
   const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    const name = form.get("name");
-    const url = form.get("url");
     const email = form.get("email");
     const password = form.get("password");
 
