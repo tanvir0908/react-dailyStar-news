@@ -20,9 +20,7 @@ export default function LeftSideNav() {
       <div className="mt-5" id="left-nav">
         {categories.map((category) => (
           <NavLink
-            to={`/category/${category.id}`}
-            o
-            className="block text-2xl font-medium px-10 py-4"
+            className="block text-2xl font-medium px-10 py-4 active:bg-violet-700"
             key={category.id}
           >
             {category.name}
@@ -33,20 +31,20 @@ export default function LeftSideNav() {
         <SmallCard
           image={smallImage1}
           title={"Bayern Slams Authorities Over Flight Delay to Club World Cup"}
-          date={'Jan 4, 2022'}
-          category={'Sport'}
+          date={"Jan 4, 2022"}
+          category={"Sport"}
         />
         <SmallCard
           image={smallImage2}
           title={"Bayern Slams Authorities Over Flight Delay to Club World Cup"}
-          date={'Jan 4, 2022'}
-          category={'Sport'}
+          date={"Jan 4, 2022"}
+          category={"Sport"}
         />
         <SmallCard
           image={smallImage3}
           title={"Bayern Slams Authorities Over Flight Delay to Club World Cup"}
-          date={'Jan 4, 2022'}
-          category={'Sport'}
+          date={"Jan 4, 2022"}
+          category={"Sport"}
         />
       </div>
     </div>
